@@ -6,8 +6,32 @@
 
 html {
   font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
 }
 
-body {
-  font-family: ;
+.background {
+  background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+  background-size: 400% 400%;
+  animation: animatedBackground 10s ease infinite;
+  height: 100vh;
+
+  @keyframes animatedBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.container {
+  width: 100vh;
+  height: 50vh;
+  transform: translate(50%, 50%);
+  background-color: orangered;
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 4px 10px;
 }
