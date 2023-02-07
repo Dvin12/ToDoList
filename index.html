@@ -21,7 +21,30 @@
   </head>
   <body>
     <div class="background">
-      <div class="container">CONTAINER</div>
+      <div class="container">
+        <header class="header">
+          <i class="fa-solid fa-moon"></i>
+          <h1 class="header__name">ToDO App</h1>
+          <p class="header__text">
+            Have your everyday tasks simplified and organised :)
+          </p>
+        </header>
+        <section class="idle-state">
+          <i class="fa-solid fa-list-check"></i>
+          <h2 class="idle-state__name">
+            Unfortunately, things won't be done by themselves
+            <i class="fa-regular fa-face-sad-cry"></i>
+          </h2>
+          <p class="idle-state__text">What needs to be done today?</p>
+        </section>
+        <form class="form">
+          <input
+            type="text"
+            placeholder="Example: Don't forget to pick up kids from school"
+            class="form__input"
+          />
+        </form>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>

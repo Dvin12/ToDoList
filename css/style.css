@@ -12,20 +12,8 @@ html {
 .background {
   background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
   background-size: 400% 400%;
-  -webkit-animation: animatedBackground 10s ease infinite;
-          animation: animatedBackground 10s ease infinite;
+  animation: animatedBackground 10s ease infinite;
   height: 100vh;
-}
-@-webkit-keyframes animatedBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 @keyframes animatedBackground {
   0% {
@@ -40,9 +28,9 @@ html {
 }
 
 .container {
-  width: 100vh;
-  height: 50vh;
+  width: 50%;
+  height: 50%;
   transform: translate(50%, 50%);
-  background-color: orangered;
+  background-color: #dee2e6;
   box-shadow: rgba(0, 0, 0, 0.55) 0px 4px 10px;
 }/*# sourceMappingURL=style.css.map */
