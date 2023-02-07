@@ -33,4 +33,29 @@ html {
   transform: translate(50%, 50%);
   background-color: #dee2e6;
   box-shadow: rgba(0, 0, 0, 0.55) 0px 4px 10px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__darkmode {
+  align-self: flex-end;
+  font-size: 2.6rem;
+  margin: 0 2rem;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+.header__name {
+  margin-top: 0.4rem;
+  font-size: 5.8rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #343a40;
+}
+.header__text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.8px;
 }/*# sourceMappingURL=style.css.map */
