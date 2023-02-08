@@ -32,15 +32,20 @@
 
   &__list {
     list-style: none;
-    margin: 2rem;
+    margin: 0 2rem;
 
     &__item {
-      margin-bottom: 0.5rem;
+      margin: 0.8rem 0;
+      padding: 0.6rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       background-color: rgba(21, 26, 31, 0.356);
       border-radius: 6px;
+
+      input[type="checkbox"] {
+        display: none;
+      }
 
       .tick {
         width: 2.6rem;
@@ -52,6 +57,7 @@
         flex-grow: 1;
         font-size: 2.2rem;
         margin-left: 0.5rem;
+        margin-top: 0.3rem;
       }
 
       button {
@@ -92,8 +98,8 @@
 
 .form {
   display: flex;
-  justify-content: center;
-  align-content: space-between;
+  flex-direction: column;
+  align-content: center;
   flex-wrap: wrap;
   margin-top: 2rem;
 
@@ -101,11 +107,33 @@
     width: 40%;
     padding: 1.2rem;
     border-radius: 12px;
-    border: 1px solid;
+    border: 1px solid rgba(0, 0, 0, 0.336);
     outline: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
     &::placeholder {
       font-family: inherit;
+    }
+  }
+
+  button {
+    align-self: center;
+    margin-top: 1.4rem;
+    padding: 1.2rem;
+    width: 12%;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: 0.8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
+    background-color: #f8f9fa;
+    transition: all 0.3s;
+
+    &:hover,
+    &::after {
+      background-color: #4dabf7;
     }
   }
 }
