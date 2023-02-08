@@ -26,11 +26,52 @@
   }
 }
 
+.state {
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    list-style: none;
+    margin: 2rem;
+
+    &__item {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(21, 26, 31, 0.356);
+      border-radius: 6px;
+
+      .tick {
+        width: 2.6rem;
+        height: 2.6rem;
+        border: 3px solid #fff;
+        border-radius: 50%;
+      }
+      span {
+        flex-grow: 1;
+        font-size: 2.2rem;
+        margin-left: 0.5rem;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+        margin-right: 0.6rem;
+        font-size: 2.6rem;
+      }
+    }
+  }
+}
+
 .idle-state {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #343a40;
+  display: none;
 
   &__icon {
     font-size: 4.8rem;

@@ -60,11 +60,48 @@ html {
   letter-spacing: 0.8px;
 }
 
+.state {
+  display: flex;
+  flex-direction: column;
+}
+.state__list {
+  list-style: none;
+  margin: 2rem;
+}
+.state__list__item {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(21, 26, 31, 0.356);
+  border-radius: 6px;
+}
+.state__list__item .tick {
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.state__list__item span {
+  flex-grow: 1;
+  font-size: 2.2rem;
+  margin-left: 0.5rem;
+}
+.state__list__item button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  margin-right: 0.6rem;
+  font-size: 2.6rem;
+}
+
 .idle-state {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #343a40;
+  display: none;
 }
 .idle-state__icon {
   font-size: 4.8rem;

@@ -29,13 +29,29 @@
             Have your everyday tasks simplified and organised :)
           </p>
         </header>
-        <section class="idle-state">
-          <i class="fa-solid fa-list-check idle-state__icon"></i>
-          <h2 class="idle-state__name">
-            Unfortunately, things won't be done by themselves
-            <i class="fa-regular fa-face-sad-cry"></i>
-          </h2>
-          <p class="idle-state__text">What needs to be done today?</p>
+
+        <section class="state">
+          <ul class="state__list">
+            <li class="state__list__item">
+              <input id="" type="checkbox" />
+              <label for="" class="tick"></label>
+              <span>RANDOM TEXT</span>
+              <button class="edit">
+                <i class="fa-regular fa-pen-to-square"></i>
+              </button>
+              <button class="delete">
+                <i class="fa-regular fa-circle-xmark"></i>
+              </button>
+            </li>
+          </ul>
+          <div class="idle-state">
+            <i class="fa-solid fa-list-check idle-state__icon"></i>
+            <h2 class="idle-state__name">
+              Unfortunately, things won't be done by themselves
+              <i class="fa-regular fa-face-sad-cry"></i>
+            </h2>
+            <p class="idle-state__text">What needs to be done today?</p>
+          </div>
         </section>
         <form class="form">
           <input
