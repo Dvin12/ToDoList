@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -74,8 +75,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(21, 26, 31, 0.356);
-  border-radius: 6px;
+  background-color: rgba(28, 42, 56, 0.164);
+  border-radius: 8px;
 }
 .state__list__item input[type=checkbox] {
   display: none;
@@ -85,6 +86,16 @@ html {
   height: 2.6rem;
   border: 3px solid #fff;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.state__list__item .tick::before {
+  content: "✓";
+  font-size: 1.8rem;
+  display: none;
 }
 .state__list__item span {
   flex-grow: 1;
@@ -102,6 +113,14 @@ html {
 }
 .state__list__item button i {
   pointer-events: none;
+}
+
+.done .tick::before {
+  display: inline;
+}
+
+.done span {
+  text-decoration: line-through;
 }
 
 .idle-state {

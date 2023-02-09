@@ -40,8 +40,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: rgba(21, 26, 31, 0.356);
-      border-radius: 6px;
+      background-color: rgba(28, 42, 56, 0.164);
+      border-radius: 8px;
 
       input[type="checkbox"] {
         display: none;
@@ -52,7 +52,19 @@
         height: 2.6rem;
         border: 3px solid #fff;
         border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+
+        &::before {
+          content: "✓";
+          font-size: 1.8rem;
+          display: none;
+        }
       }
+
       span {
         flex-grow: 1;
         font-size: 2.2rem;
@@ -76,6 +88,12 @@
   }
 }
 
+.done .tick::before {
+  display: inline;
+}
+.done span {
+  text-decoration: line-through;
+}
 .idle-state {
   display: none;
   flex-direction: column;
