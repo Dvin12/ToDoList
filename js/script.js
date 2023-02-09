@@ -1,11 +1,14 @@
 let todoItems = [];
 
 function renderTodo(todo) {
+  localStorage.setItem("todoItemsRef", JSON.stringify(todoItems));
+
   const list = document.querySelector(".state__list");
   const item = document.querySelector(`[data-key='${todo.id}']`);
 
   if (todo.deleted) {
     item.remove();
+    if (todoItems.length === 0) list.innerHTML = "";
     return;
   }
   // Make the li item appear
@@ -83,5 +86,15 @@ list.addEventListener("click", (event) => {
   if (event.target.classList.contains("delete")) {
     const itemKey = event.target.parentElement.dataset.key;
     deleteTodo(itemKey);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const ref = localStorage.getItem("todoItemsRef");
+  if (ref) {
+    todoItems = JSON.parse(ref);
+    todoItems.forEach((t) => {
+      renderTodo(t);
+    });
   }
 });

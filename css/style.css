@@ -96,9 +96,12 @@ html {
   border: none;
   outline: none;
   background: transparent;
-  cursor: pointer;
   margin-right: 0.6rem;
   font-size: 2.6rem;
+  cursor: pointer;
+}
+.state__list__item button i {
+  pointer-events: none;
 }
 
 .idle-state {

@@ -64,9 +64,13 @@
         border: none;
         outline: none;
         background: transparent;
-        cursor: pointer;
         margin-right: 0.6rem;
         font-size: 2.6rem;
+        cursor: pointer;
+
+        i {
+          pointer-events: none;
+        }
       }
     }
   }
