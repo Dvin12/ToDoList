@@ -1,3 +1,21 @@
+const toggle = document.getElementById("toggleDark");
+const background = document.querySelector(".background");
+
+toggle.addEventListener("click", function () {
+  this.classList.toggle("fa-solid");
+  this.classList.toggle("fa-moon");
+
+  if (this.classList.toggle("fa-regular")) {
+    background.style.background =
+      "linear-gradient(to top, #d299c2 0%, #fef9d7 100%)";
+    background.style.transition = "2s";
+  } else {
+    background.style.background =
+      "linear-gradient(to top, #0F2027 0%, #2C5364 100%)";
+    background.style.transition = "2s";
+  }
+});
+
 let todoItems = [];
 
 function renderTodo(todo) {
@@ -20,9 +38,6 @@ function renderTodo(todo) {
   node.innerHTML = `<input id="${todo.id}" type="checkbox" />
     <label for="${todo.id}" class="tick"></label>
     <span>${todo.text}</span>
-    <button class="edit">
-      <i class="fa-regular fa-pen-to-square"></i>
-    </button>
     <button class="delete">
       <i class="fa-regular fa-circle-xmark"></i>
     </button>
