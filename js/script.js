@@ -1,5 +1,36 @@
 let todoItems = [];
 
+function renderTodo(todo) {
+  const list = document.querySelector(".state__list");
+  const item = document.querySelector(`[data-key='${todo.id}']`);
+
+  if (todo.deleted) {
+    item.remove();
+    return;
+  }
+  // Make the li item appear
+
+  const isChecked = todo.checked ? "done" : "";
+  const node = document.createElement("li");
+  node.setAttribute("class", `state__list__item ${isChecked}`);
+  node.setAttribute("data-key", todo.id);
+  node.innerHTML = `<input id="${todo.id}" type="checkbox" />
+    <label for="${todo.id}" class="tick"></label>
+    <span>${todo.text}</span>
+    <button class="edit">
+      <i class="fa-regular fa-pen-to-square"></i>
+    </button>
+    <button class="delete">
+      <i class="fa-regular fa-circle-xmark"></i>
+    </button>
+    `;
+  if (item) {
+    list.replaceChild(node, item);
+  } else {
+    list.append(node);
+  }
+}
+
 function addTodo(text) {
   const todo = {
     text,
@@ -17,6 +48,16 @@ function toggleDone(key) {
   renderTodo(todoItems[index]);
 }
 
+function deleteTodo(key) {
+  const index = todoItems.findIndex((item) => item.id === Number(key));
+  const todo = {
+    deleted: true,
+    ...todoItems[index],
+  };
+  todoItems = todoItems.filter((item) => item.id !== Number(key));
+  renderTodo(todo);
+}
+
 const form = document.querySelector(".form");
 
 form.addEventListener("submit", (event) => {
@@ -31,37 +72,16 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-// Make the li item appear
-
-function renderTodo(todo) {
-  const list = document.querySelector(".state__list");
-  const item = document.querySelector(`[data-key='${todo.id}']`);
-  const isChecked = todo.checked ? "done" : "";
-  const node = document.createElement("li");
-  node.setAttribute("class", `state__list__item ${isChecked}`);
-  node.setAttribute("data-key", todo.id);
-  node.innerHTML = `<input id="${todo.id}" type="checkbox" />
-  <label for="${todo.id}" class="tick"></label>
-  <span>${todo.text}</span>
-  <button class="edit">
-    <i class="fa-regular fa-pen-to-square"></i>
-  </button>
-  <button class="delete">
-    <i class="fa-regular fa-circle-xmark"></i>
-  </button>
-  `;
-  if (item) {
-    list.replaceChild(node, item);
-  } else {
-    list.append(node);
-  }
-}
-
-// Mark task as completed
+// Mark task as completed and Delete
 const list = document.querySelector(".state__list");
 list.addEventListener("click", (event) => {
   if (event.target.classList.contains("tick")) {
     const itemKey = event.target.parentElement.dataset.key;
     toggleDone(itemKey);
+  }
+
+  if (event.target.classList.contains("delete")) {
+    const itemKey = event.target.parentElement.dataset.key;
+    deleteTodo(itemKey);
   }
 });
