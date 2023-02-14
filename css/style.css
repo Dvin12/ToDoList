@@ -36,10 +36,31 @@ html {
   color: #fff;
 }
 
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 80%;
+  }
+}
+@media only screen and (max-width: 41.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 26em) {
+  html {
+    font-size: 45%;
+  }
+}
+@media only screen and (max-width: 24.375em) {
+  html {
+    font-size: 40%;
+  }
+}
 .container {
   width: 50%;
   height: 50%;
   transform: translate(50%, 30%);
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,17 +69,18 @@ html {
   box-shadow: rgba(0, 0, 0, 0.55) 0px 4px 10px;
 }
 
+@media only screen and (max-width: 75em) {
+  .container {
+    width: 100%;
+    height: 100%;
+    transform: translate(0);
+    overflow: none;
+  }
+}
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.header__darkmode {
-  align-self: flex-end;
-  font-size: 2.6rem;
-  margin: 0 2rem;
-  padding: 0.8rem;
-  cursor: pointer;
 }
 .header__name {
   margin-top: 0.4rem;
@@ -150,7 +172,7 @@ html {
   font-weight: 500;
 }
 .idle-state__text {
-  margin: 1.2rem 0;
+  margin-top: 1.8rem;
   font-size: 1.6rem;
   font-weight: 300;
 }
@@ -168,7 +190,7 @@ html {
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .form__input {
   width: 40%;
@@ -177,11 +199,6 @@ html {
   border: 1px solid rgba(0, 0, 0, 0.336);
   outline: none;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
-}
-.form__input::-moz-placeholder {
-  font-family: inherit;
-}
-.form__input::placeholder {
   font-family: inherit;
 }
 .form button {
@@ -202,4 +219,35 @@ html {
 }
 .form button:hover, .form button::after {
   background-color: #4dabf7;
+}
+
+@media only screen and (max-width: 75em) {
+  .state__list {
+    margin: 0 4rem;
+  }
+  .state__list__item {
+    margin: 1.8rem 0;
+  }
+  .form__input {
+    width: 80%;
+    padding: 1.8rem;
+    font-family: inherit;
+    margin-top: 4rem;
+  }
+  .form__input::-moz-placeholder {
+    text-align: center;
+  }
+  .form__input::placeholder {
+    text-align: center;
+  }
+  .form button {
+    width: 15%;
+    margin-top: 2rem;
+    padding: 1.8rem;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .form button {
+    width: 20%;
+  }
 }/*# sourceMappingURL=style.css.map */

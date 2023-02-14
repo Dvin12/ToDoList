@@ -2,11 +2,20 @@
   width: 50%;
   height: 50%;
   transform: translate(50%, 30%);
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: auto;
-
   background-color: #dee2e6;
   box-shadow: rgba(0, 0, 0, 0.55) 0px 4px 10px;
+}
+
+@media only screen and (max-width: 75em) {
+  .container {
+    width: 100%;
+    height: 100%;
+    transform: translate(0);
+    overflow: none;
+  }
 }

@@ -1,21 +1,3 @@
-const toggle = document.getElementById("toggleDark");
-const background = document.querySelector(".background");
-
-toggle.addEventListener("click", function () {
-  this.classList.toggle("fa-solid");
-  this.classList.toggle("fa-moon");
-
-  if (this.classList.toggle("fa-regular")) {
-    background.style.background =
-      "linear-gradient(to top, #d299c2 0%, #fef9d7 100%)";
-    background.style.transition = "2s";
-  } else {
-    background.style.background =
-      "linear-gradient(to top, #0F2027 0%, #2C5364 100%)";
-    background.style.transition = "2s";
-  }
-});
-
 let todoItems = [];
 
 function renderTodo(todo) {

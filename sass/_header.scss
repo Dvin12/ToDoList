@@ -3,14 +3,6 @@
   flex-direction: column;
   align-items: center;
 
-  &__darkmode {
-    align-self: flex-end;
-    font-size: 2.6rem;
-    margin: 0 2rem;
-    padding: 0.8rem;
-    cursor: pointer;
-  }
-
   &__name {
     margin-top: 0.4rem;
     font-size: 5.8rem;
@@ -111,7 +103,7 @@
   }
 
   &__text {
-    margin: 1.2rem 0;
+    margin-top: 1.8rem;
     font-size: 1.6rem;
     font-weight: 300;
   }
@@ -130,7 +122,7 @@
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 1rem;
 
   &__input {
     width: 40%;
@@ -139,9 +131,7 @@
     border: 1px solid rgba(0, 0, 0, 0.336);
     outline: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
-    &::placeholder {
-      font-family: inherit;
-    }
+    font-family: inherit;
   }
 
   button {
@@ -163,6 +153,44 @@
     &:hover,
     &::after {
       background-color: #4dabf7;
+    }
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .state {
+    &__list {
+      margin: 0 4rem;
+
+      &__item {
+        margin: 1.8rem 0;
+      }
+    }
+  }
+
+  .form {
+    &__input {
+      width: 80%;
+      padding: 1.8rem;
+      font-family: inherit;
+      margin-top: 4rem;
+
+      &::placeholder {
+        text-align: center;
+      }
+    }
+    button {
+      width: 15%;
+      margin-top: 2rem;
+      padding: 1.8rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .form {
+    button {
+      width: 20%;
     }
   }
 }
