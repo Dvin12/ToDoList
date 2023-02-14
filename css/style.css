@@ -27,11 +27,23 @@ html {
     background-position: 0% 50%;
   }
 }
+.background .header__darkmode {
+  padding: 2rem;
+  font-size: 3.4rem;
+}
+
+.fa-moon {
+  color: #fff;
+}
 
 .container {
   width: 50%;
   height: 50%;
-  transform: translate(50%, 50%);
+  transform: translate(50%, 30%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
   background-color: #dee2e6;
   box-shadow: rgba(0, 0, 0, 0.55) 0px 4px 10px;
 }
