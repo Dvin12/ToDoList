@@ -4,17 +4,16 @@
   align-items: center;
 
   &__name {
-    margin-top: 0.4rem;
-    font-size: 5.8rem;
+    font-size: 8.8rem;
     font-weight: 700;
     letter-spacing: 0.6px;
     color: #343a40;
   }
 
   &__text {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 400;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.4px;
   }
 }
 
@@ -24,25 +23,25 @@
 
   &__list {
     list-style: none;
-    margin: 0 2rem;
+    margin: 2rem 6rem;
 
     &__item {
-      margin: 0.8rem 0;
-      padding: 0.6rem;
+      margin: 2rem 0;
+      padding: 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: rgba(28, 42, 56, 0.164);
-      border-radius: 8px;
+      background-color: rgba(23, 67, 107, 0.164);
+      border-radius: 12px;
 
       input[type="checkbox"] {
         display: none;
       }
 
       .tick {
-        width: 2.6rem;
-        height: 2.6rem;
-        border: 3px solid #fff;
+        width: 3.6rem;
+        height: 3.6rem;
+        border: 2px solid #fff;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -52,24 +51,24 @@
 
         &::before {
           content: "✓";
-          font-size: 1.8rem;
+          font-size: 2.2rem;
           display: none;
         }
       }
 
       span {
         flex-grow: 1;
-        font-size: 2.2rem;
-        margin-left: 0.5rem;
-        margin-top: 0.3rem;
+        font-size: 2.6rem;
+        margin-left: 1rem;
+        margin-top: 0rem;
       }
 
       button {
         border: none;
         outline: none;
         background: transparent;
-        margin-right: 0.6rem;
-        font-size: 2.6rem;
+        margin-right: 1.4rem;
+        font-size: 2.8rem;
         cursor: pointer;
 
         i {
@@ -93,18 +92,18 @@
   color: #343a40;
 
   &__icon {
-    font-size: 4.8rem;
+    font-size: 6rem;
     margin: 2.2rem 0;
   }
 
   &__name {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 500;
   }
 
   &__text {
-    margin-top: 1.8rem;
-    font-size: 1.6rem;
+    margin-top: 1.2rem;
+    font-size: 2.4rem;
     font-weight: 300;
   }
 }
@@ -122,10 +121,10 @@
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 2rem;
 
   &__input {
-    width: 40%;
+    min-width: 40%;
     padding: 1.2rem;
     border-radius: 12px;
     border: 1px solid rgba(0, 0, 0, 0.336);
@@ -136,7 +135,7 @@
 
   button {
     align-self: center;
-    margin-top: 1.4rem;
+    margin-top: 2.2rem;
     padding: 1.2rem;
     width: 12%;
     border: 1px solid rgba(0, 0, 0, 0.26);
@@ -164,6 +163,14 @@
 
       &__item {
         margin: 1.8rem 0;
+
+        span {
+          font-size: 3.6rem;
+        }
+
+        button {
+          font-size: 3.6rem;
+        }
       }
     }
   }
@@ -173,7 +180,6 @@
       width: 80%;
       padding: 1.8rem;
       font-family: inherit;
-      margin-top: 4rem;
 
       &::placeholder {
         text-align: center;
@@ -183,6 +189,7 @@
       width: 15%;
       margin-top: 2rem;
       padding: 1.8rem;
+      font-size: 2.6rem;
     }
   }
 }

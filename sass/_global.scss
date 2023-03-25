@@ -10,53 +10,37 @@ html {
 }
 
 .background {
-  background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
-  background-size: 400% 400%;
+  background: linear-gradient(to top, #83a4d4 0%, #b6fbff 100%);
+  background-size: 100% 100%;
   animation: animatedBackground 10s ease infinite;
   height: 100vh;
-
-  @keyframes animatedBackground {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  .header__darkmode {
-    padding: 2rem;
-    font-size: 3.4rem;
-  }
 }
-
-.fa-moon {
-  color: #fff;
-}
-
-@media only screen and (max-width: 75em) {
-  html {
-    font-size: 80%;
+@keyframes animatedBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
 @media only screen and (max-width: 41.25em) {
   html {
-    font-size: 50%;
+    font-size: 40%;
   }
 }
 
 @media only screen and (max-width: 26em) {
   html {
-    font-size: 45%;
+    font-size: 35%;
   }
 }
 
 @media only screen and (max-width: 24.375em) {
   html {
-    font-size: 40%;
+    font-size: 30%;
   }
 }

@@ -11,11 +11,12 @@ html {
 }
 
 .background {
-  background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
-  background-size: 400% 400%;
+  background: linear-gradient(to top, #83a4d4 0%, #b6fbff 100%);
+  background-size: 100% 100%;
   animation: animatedBackground 10s ease infinite;
   height: 100vh;
 }
+
 @keyframes animatedBackground {
   0% {
     background-position: 0% 50%;
@@ -27,72 +28,46 @@ html {
     background-position: 0% 50%;
   }
 }
-.background .header__darkmode {
-  padding: 2rem;
-  font-size: 3.4rem;
-}
-
-.fa-moon {
-  color: #fff;
-}
-
-@media only screen and (max-width: 75em) {
-  html {
-    font-size: 80%;
-  }
-}
 @media only screen and (max-width: 41.25em) {
-  html {
-    font-size: 50%;
-  }
-}
-@media only screen and (max-width: 26em) {
-  html {
-    font-size: 45%;
-  }
-}
-@media only screen and (max-width: 24.375em) {
   html {
     font-size: 40%;
   }
 }
+@media only screen and (max-width: 26em) {
+  html {
+    font-size: 35%;
+  }
+}
+@media only screen and (max-width: 24.375em) {
+  html {
+    font-size: 30%;
+  }
+}
 .container {
-  width: 50%;
-  height: 50%;
-  transform: translate(50%, 30%);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: auto;
-  background-color: #dee2e6;
-  box-shadow: rgba(0, 0, 0, 0.55) 0px 4px 10px;
+  width: 100%;
+  height: 100%;
 }
 
-@media only screen and (max-width: 75em) {
-  .container {
-    width: 100%;
-    height: 100%;
-    transform: translate(0);
-    overflow: none;
-  }
-}
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .header__name {
-  margin-top: 0.4rem;
-  font-size: 5.8rem;
+  font-size: 8.8rem;
   font-weight: 700;
   letter-spacing: 0.6px;
   color: #343a40;
 }
 .header__text {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 400;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.4px;
 }
 
 .state {
@@ -101,24 +76,24 @@ html {
 }
 .state__list {
   list-style: none;
-  margin: 0 2rem;
+  margin: 2rem 6rem;
 }
 .state__list__item {
-  margin: 0.8rem 0;
-  padding: 0.6rem;
+  margin: 2rem 0;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(28, 42, 56, 0.164);
-  border-radius: 8px;
+  background-color: rgba(23, 67, 107, 0.164);
+  border-radius: 12px;
 }
 .state__list__item input[type=checkbox] {
   display: none;
 }
 .state__list__item .tick {
-  width: 2.6rem;
-  height: 2.6rem;
-  border: 3px solid #fff;
+  width: 3.6rem;
+  height: 3.6rem;
+  border: 2px solid #fff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -128,21 +103,21 @@ html {
 }
 .state__list__item .tick::before {
   content: "✓";
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   display: none;
 }
 .state__list__item span {
   flex-grow: 1;
-  font-size: 2.2rem;
-  margin-left: 0.5rem;
-  margin-top: 0.3rem;
+  font-size: 2.6rem;
+  margin-left: 1rem;
+  margin-top: 0rem;
 }
 .state__list__item button {
   border: none;
   outline: none;
   background: transparent;
-  margin-right: 0.6rem;
-  font-size: 2.6rem;
+  margin-right: 1.4rem;
+  font-size: 2.8rem;
   cursor: pointer;
 }
 .state__list__item button i {
@@ -164,16 +139,16 @@ html {
   color: #343a40;
 }
 .idle-state__icon {
-  font-size: 4.8rem;
+  font-size: 6rem;
   margin: 2.2rem 0;
 }
 .idle-state__name {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 500;
 }
 .idle-state__text {
-  margin-top: 1.8rem;
-  font-size: 1.6rem;
+  margin-top: 1.2rem;
+  font-size: 2.4rem;
   font-weight: 300;
 }
 
@@ -190,10 +165,10 @@ html {
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .form__input {
-  width: 40%;
+  min-width: 40%;
   padding: 1.2rem;
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.336);
@@ -203,7 +178,7 @@ html {
 }
 .form button {
   align-self: center;
-  margin-top: 1.4rem;
+  margin-top: 2.2rem;
   padding: 1.2rem;
   width: 12%;
   border: 1px solid rgba(0, 0, 0, 0.26);
@@ -228,11 +203,16 @@ html {
   .state__list__item {
     margin: 1.8rem 0;
   }
+  .state__list__item span {
+    font-size: 3.6rem;
+  }
+  .state__list__item button {
+    font-size: 3.6rem;
+  }
   .form__input {
     width: 80%;
     padding: 1.8rem;
     font-family: inherit;
-    margin-top: 4rem;
   }
   .form__input::-moz-placeholder {
     text-align: center;
@@ -244,6 +224,7 @@ html {
     width: 15%;
     margin-top: 2rem;
     padding: 1.8rem;
+    font-size: 2.6rem;
   }
 }
 @media only screen and (max-width: 50em) {
